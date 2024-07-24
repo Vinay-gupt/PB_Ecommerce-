@@ -38,7 +38,7 @@ const Payment = () => {
       let config={
         method:"post",
         maxBodyLength: Infinity,
-        url:"http://localhost:5000/orders",
+        url:"https://pb-backend-xysk.onrender.com/orders",
         headers:{
           "Content-Type":"application/json"
         },
@@ -96,7 +96,7 @@ const Payment = () => {
         e.preventDefault();
 
         const paymentId=e.target.paymentId.value;
-        axios.get(`http://localhost:5000/payment/${paymentId}`)
+        axios.get(`https://pb-backend-xysk.onrender.com/payment/${paymentId}`)
         .then((response)=>{
           setresponseState(response.data)
         })
