@@ -57,7 +57,7 @@ const Payment = () => {
     const handleRazorpayScreen= async(amount)=>{
       console.log("hi");
       
-        const res=await loadScript("https:/checkout.razorpay.com/v1/checkout.js")
+        const res=await loadScript("https://checkout.razorpay.com/v1/checkout.js")
         console.log(res);
              
       if(!res){
