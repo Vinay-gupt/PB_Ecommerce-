@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities; */
 
+  .Cart-sidebox{
+    margin-top:10rem;
+    background-color:"white";
+    width:"30%";
+    text-align:"center";
+    height:"15rem";
+    box-shadow:"8px 8px 8px 8px gray"
+  }
 *{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -1078,4 +1086,30 @@ img{
   color: black;
   font-size: 16px;
   transition: background-color 0.3s;
+}
+
+@media (max-width: 600px) {
+
+  .scroll-item{
+    width: 45%;
+  }
+  .navbar{
+    z-index: 5;
+  }
+  .progress-container{
+    top: 5rem;
+    left: 13%;
+  }
+  .card{
+    width: 85%;
+  }
+  .Cart-sidebox{
+    margin-top: 2rem;
+    background-color: white;
+    /* width: 30%; */
+    text-align: center;
+    padding: 10px 10px;
+    /* height: 15rem; */
+    box-shadow: gray 8px 8px 8px 8px;
+  }
 }

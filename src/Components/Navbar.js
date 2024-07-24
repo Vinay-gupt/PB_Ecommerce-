@@ -17,7 +17,7 @@ const Navbar = () => {
                             top: 0,
                              behavior:"instant"
                         });
-                    }}><button className='navbar-button' style={{marginRight:"5px"}} >Cart ({cartItems.length})</button></Link>
+                    }}><button className='navbar-button' disabled={cartItems.length===0} style={{marginRight:"5px"}} >Cart ({cartItems.length})</button></Link>
       </div>
     </nav>
   );

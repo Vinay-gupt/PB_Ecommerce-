@@ -88,7 +88,7 @@ const Cart = () => {
     ))}
 
     </div>)}
-    <div style={{marginTop:"10rem","backgroundColor":"white",width:"30%",textAlign:"center",height:"15rem",boxShadow:"8px 8px 8px 8px gray"}} >
+    <div className="Cart-sidebox" >
       <h2>Subtotal {cartItems.length} items</h2>
       <h1>Total: $ {Total}</h1>
       <Link to="/address"><button disabled={cartItems.length===0} onClick={() => {

@@ -3,12 +3,14 @@ import Navbar from './Navbar';
 import ProgressBar from './ProgessBar';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 
 const Payment = () => {
     const [selectedPayment, setSelectedPayment] = useState('');
     const [ResponseId, setResponseId] = useState("");
     const [responseState, setresponseState] = useState([])
     const navigate = useNavigate();
+    // const cartItems = useSelector((state) => state.Product);
 
     const handlePaymentChange = (e) => {
       setSelectedPayment(e.target.value);
@@ -74,7 +76,7 @@ const Payment = () => {
         handler: function(response){
           setResponseId(response.razorpay_payment_id)
           navigate('/summary'); // Redirect to summary page after payment
-
+          
         },
         prefill:{
           name:"Vinay",
