@@ -8,9 +8,13 @@ import { data } from "../Context/StatesContext";
 const Products = () => {
   const {
     furniture,
+    setfurniture,
     mensshirts,
+    setmensshirts,
     laptops,
+    setlaptops,
     watches,
+    setwatches
   } = useContext(data);
 
   const selectedCategories = [];
@@ -42,6 +46,10 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const prodData = async () => {
     const mergedProducts = await fetchAndMergeCategories();
+    setfurniture(false)
+    setmensshirts(false)
+    setwatches(false)
+    setlaptops(false)
     setProducts(mergedProducts);
     console.log(mergedProducts);
   };
