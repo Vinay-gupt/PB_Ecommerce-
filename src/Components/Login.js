@@ -31,17 +31,7 @@ const Login = () => {
   console.log(FormData, "hi");
   const navigate = useNavigate();
 
-  const handleNameChange = (event) => {
-    setLoginName(event.target.value);
-  };
-
-  const handleEmailChange = (event) => {
-    setLoginEmail(event.target.value);
-  };
-
-  const handlePasswordChange = (event) => {
-    setLoginPassword(event.target.value);
-  };
+  
 
   // const handleSubmit1 = (event) => {
   //   event.preventDefault();
@@ -91,7 +81,7 @@ const Login = () => {
       Swal.fire({
         position: "top-end",
         icon: "success",
-        title: "Successfully Signup",
+        title: "Successfully Login",
         showConfirmButton: false,
         timer: 800,
       });

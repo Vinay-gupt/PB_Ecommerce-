@@ -160,6 +160,10 @@ input[type="tel"] {
 }
 
 .scroll-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   flex: 0 0 auto;
   margin-right: 10px;
   width: 20%;
@@ -171,7 +175,7 @@ input[type="tel"] {
 }
 
 .item-image1 {
-  width: 70%;
+  width: 90%;
   height: auto;
   border-bottom: 1px solid #ddd;
   margin-bottom: 5px;
@@ -183,6 +187,7 @@ input[type="tel"] {
 }
 
 .scroll-button {
+  
   background-color: #54dea0;
   border: none;
   padding: 8px;
@@ -528,11 +533,14 @@ img{
 .navbar-logo {
   font-size: 24px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding:2px;
 }
@@ -1088,6 +1096,15 @@ img{
   transition: background-color 0.3s;
 }
 
+.Address-info{
+  border: 0px solid gray;
+  width: 60%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgb(231, 238, 255);
+  margin: 5px;
+}
+
 @media (max-width: 600px) {
 
   .scroll-item{
@@ -1112,4 +1129,81 @@ img{
     /* height: 15rem; */
     box-shadow: gray 8px 8px 8px 8px;
   }
+  .Address-info{
+    border: 0px solid gray;
+    width: 94%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(231, 238, 255);
+    margin: 5px;
+  }
+}
+
+
+.sliding-form {
+  position: absolute;
+  top: 5rem; /* Adjust as needed */
+  right: -300px; /* Hide it initially */
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.sliding-form.visible {
+  right: 0%; /* Adjust as needed */
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+  color: black;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }

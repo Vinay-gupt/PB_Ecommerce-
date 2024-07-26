@@ -28,39 +28,25 @@ const Cart = () => {
 };
 
 
-// useEffect(() => {
-//     const handlePopState = (event) => {
-//         if (event.state && event.state.step !== undefined) {
-//             setCurrentStep(event.state.step);
-//         }
-//     };
-
-//     window.onpopstate = handlePopState;
-
-//     return () => {
-//         window.onpopstate = null;
-//     };
-// }, []);
-
   return (
     <>
-    <Navbar/>
+    <Navbar none={true}/>
     
             <ProgressBar currentStep={0} />
             
            
-    <div className="main3" style={{flexDirection:"row",flexWrap:"wrap",alignItems:"flex-start",justifyContent:"space-around"}}>
+    <div className="main3" style={{flexDirection:"row",flexWrap:"wrap",alignItems:"flex-start",justifyContent:"space-evenly",}}>
     {cartItems.length===0?(
       <div style={{marginTop:"8rem"}}>
         <h2 style={{textAlign:"center"}}>Cart is empty</h2>
 
-    </div>):(<div style={{marginTop:"8rem"}} className="main3" >
+    </div>):(<div style={{marginTop:"8rem",borderRight:"1px solid gray",flexWrap:"wrap"}} className="main3" >
     {cartItems.map((Items)=>(
       <div className="card" key={Items.id} style={{boxshadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset"}}>
       <div className="card-wrapper">
         <div className="card-icon">
           <div className="icon-cart-box">
-            <img src={Items.image} alt="" style={{aspectRatio:"3/4",width:"100%"}} />
+            <img src={Items.thumbnail} alt="" style={{aspectRatio:"3/4",width:"100%"}} />
           </div>
         </div>
     

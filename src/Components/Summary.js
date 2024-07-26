@@ -12,7 +12,7 @@ const Summary = () => {
   // Assuming cartItems is an array of objects with product details
   return (
     <>
-    <Navbar/>
+    <Navbar  none={true}/>
     <ProgressBar currentStep={3}/>
     <div className="summary-section" style={{marginTop:"10rem"}}>
       <h2>Your Order Summary</h2>
@@ -22,7 +22,7 @@ const Summary = () => {
         ) : (
           cartItems.map((item) => (
             <div key={item.id} className="summary-item">
-              <img src={item.image} alt={item.title} className="item-image" />
+              <img src={item.thumbnail} alt={item.title} className="item-image" />
               <div className="item-details">
                 <h3 className="item-name">{item.title}</h3>
                 <p className="item-price">${item.price.toFixed(2)}</p>

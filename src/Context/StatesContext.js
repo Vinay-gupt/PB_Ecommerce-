@@ -22,6 +22,13 @@ const StateContext = ({ children }) => {
     setAddresses([...addresses, address]);
 };
 
+  //FILTERS
+  const[furniture,setfurniture]=useState(false)
+  const[mensshirts,setmensshirts]=useState(false)
+  const[laptops,setlaptops]=useState(false)
+  const[watches,setwatches]=useState(false)
+
+  
 const [currentStep, setCurrentStep] = useState(0);
 
 
@@ -48,7 +55,16 @@ const [currentStep, setCurrentStep] = useState(0);
         FormData,
         addresses, addAddress,
         currentStep,
-        setCurrentStep
+        setCurrentStep,
+        furniture,
+        setfurniture,
+        mensshirts,
+        setmensshirts,
+        laptops,
+        setlaptops,
+        watches,
+        setwatches
+
       }}
     >
       {children}

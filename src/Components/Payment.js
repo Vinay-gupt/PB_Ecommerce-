@@ -109,7 +109,7 @@ const Payment = () => {
 
   return (
     <>
-    <Navbar/>
+    <Navbar  none={true}/>
     <ProgressBar currentStep={2} />
     <div className="payment-section" style={{"marginTop":"10rem"}}>
       <h2>Select Payment Method</h2>

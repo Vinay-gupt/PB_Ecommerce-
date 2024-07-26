@@ -47,16 +47,9 @@ const Address = () => {
   };
   const { currentStep, setCurrentStep } = useContext(data);
 
-  const handleNext = () => {
-    setCurrentStep((prevStep) => Math.min(prevStep + 1, 3));
-  };
-
-  const handlePrevious = () => {
-    setCurrentStep((prevStep) => Math.max(prevStep - 1, 0));
-  };
   return (
     <>
-      <Navbar />
+      <Navbar  none={true}/>
       <ProgressBar currentStep={1}  />
       <div className="main3" style={{ marginTop: "7rem",flexDirection:"row",alignItems:"flex-start",justifyContent:"space-around" }}>
         <div
@@ -86,14 +79,7 @@ const Address = () => {
           {addresses.map((address, ind) => (
             <div
               key={ind}
-              style={{
-                border: "0px solid gray",
-                width: "60%",
-                textAlign: "center",
-                borderRadius: "5px",
-                backgroundColor: "rgb(231, 238, 255)",
-                margin: "5px",
-              }}
+              className="Address-info"
             >
               <h2>{address.name}</h2>
               <h3>
