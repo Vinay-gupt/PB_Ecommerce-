@@ -20,7 +20,7 @@ const Filter = ({none}) => {
     };
   return (
     <>
-        <img style={{aspectRatio:"3/4",width:"10%",mixBlendMode:"darken",filter:"brightness(0.5)", display : none?"none":"block"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOhuy_XTB3n4ZjpKxU-hWI8wNowxh9m8W4fA&s" alt="" onClick={toggleForm} />
+        <img style={{aspectRatio:"3/4",width:"10%",mixBlendMode:"darken",filter:"brightness(0.5)", display : none?"none":"block",marginRight:"1rem"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOhuy_XTB3n4ZjpKxU-hWI8wNowxh9m8W4fA&s" alt="" onClick={toggleForm} />
 
         <div className={`sliding-form ${isVisible ? 'visible' : ''}`}>
         <label className="checkbox-container">
